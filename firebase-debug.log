@@ -1,0 +1,39 @@
+[debug] [2024-01-26T03:55:50.259Z] ----------------------------------------------------------------------
+[debug] [2024-01-26T03:55:50.262Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\btdung1\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-01-26T03:55:50.262Z] CLI Version:   13.1.0
+[debug] [2024-01-26T03:55:50.262Z] Platform:      win32
+[debug] [2024-01-26T03:55:50.262Z] Node Version:  v20.11.0
+[debug] [2024-01-26T03:55:50.263Z] Time:          Fri Jan 26 2024 10:55:50 GMT+0700 (Indochina Time)
+[debug] [2024-01-26T03:55:50.263Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-26T03:55:50.270Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-26T03:55:50.272Z] > authorizing via signed-in user (buitiendung_t64@hus.edu.vn)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Seminar\Deploy\deploytest
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-01-26T03:57:18.545Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-01-26T03:57:18.546Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"deploy","name":"deployapptest"}
+[debug] [2024-01-26T03:57:19.795Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-01-26T03:57:19.795Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-01-26T03:57:19.911Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (C:\Users\btdung1\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\btdung1\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:292:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID deploy. Please try again with a unique project ID.
